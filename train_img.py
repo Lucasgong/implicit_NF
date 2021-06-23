@@ -1,24 +1,24 @@
 import argparse
-import time
+import gc
 import math
 import os
 import os.path
-import numpy as np
-from tqdm import tqdm
-import gc
+import time
 
+import numpy as np
 import torch
+import torchvision.datasets as vdsets
 import torchvision.transforms as transforms
 from torchvision.utils import save_image
-import torchvision.datasets as vdsets
+from tqdm import tqdm
 
-from lib.implicit_flow import ACT_FNS, ImplicitFlow
-import lib.datasets as datasets
-import lib.optimizers as optim
-import lib.utils as utils
-import lib.layers as layers
-import lib.layers.base as base_layers
-from lib.lr_scheduler import CosineAnnealingWarmRestarts
+import model.datasets as datasets
+import model.layers as layers
+import model.layers.base as base_layers
+import model.optimizers as optim
+import model.utils as utils
+from model.implicit_flow import ACT_FNS, ImplicitFlow
+from model.lr_scheduler import CosineAnnealingWarmRestarts
 
 # Arguments
 parser = argparse.ArgumentParser()

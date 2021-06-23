@@ -1,24 +1,19 @@
 import argparse
-import time
+import gc
 import math
 import os
 import os.path
+import time
+
 import numpy as np
-from tqdm import tqdm
-import gc
-
 import torch
-import torchvision.transforms as transforms
-from torchvision.utils import save_image
-import torchvision.datasets as vdsets
+from tqdm import tqdm
 
-import lib.tabular as tabular
-import lib.optimizers as optim
-import lib.utils as utils
-import lib.layers as layers
-import lib.layers.base as base_layers
-from lib.lr_scheduler import CosineAnnealingWarmRestarts
-
+import model.layers as layers
+import model.layers.base as base_layers
+import model.optimizers as optim
+import model.tabular as tabular
+import model.utils as utils
 
 ACTIVATION_FNS = {
     'identity': base_layers.Identity,

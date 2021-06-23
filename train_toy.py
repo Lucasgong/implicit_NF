@@ -1,22 +1,17 @@
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 
 import argparse
 import os
 import time
-import math
-import numpy as np
 
+import numpy as np
 import torch
 
-import lib.optimizers as optim
-import lib.layers.base as base_layers
-import lib.layers as layers
-import lib.toy_data as toy_data
-import lib.utils as utils
-from lib.visualize_flow import visualize_transform
-
+import model.layers as layers
+import model.layers.base as base_layers
+import model.optimizers as optim
+import model.toy_data as toy_data
+import model.utils as utils
+from model.visualize_flow import visualize_transform
 
 ACTIVATION_FNS = {
     'identity': base_layers.Identity,

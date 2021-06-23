@@ -1,21 +1,18 @@
-import torch
-import torch.nn as nn
-import torch.nn.functional as F
-import numpy as np
-
-import lib.utils as utils
-
-import os
 import argparse
+import os
+import time
+
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torchvision
 import torch.optim as optim
-from torchvision import datasets, transforms
-import time
-import lib.layers.base as base_layers
-import lib.layers as layers
+import torchvision
+from torchvision import  transforms
+
+import model.layers as layers
+import model.layers.base as base_layers
+import model.utils as utils
 
 parser = argparse.ArgumentParser(description='PyTorch CIFAR TRADES Adversarial Training')
 parser.add_argument(
