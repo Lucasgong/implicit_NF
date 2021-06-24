@@ -1,16 +1,9 @@
-import torch
-from torch import nn
-import torch.nn.functional as functional
-from torch.autograd import Function
-import numpy as np 
-import pickle
-import sys
-import os
-from scipy.optimize import root
-import time
-from termcolor import colored
-
 import logging
+import pickle
+
+import numpy as np
+import torch
+from termcolor import colored
 
 logger = logging.getLogger()
 

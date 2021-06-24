@@ -1,14 +1,13 @@
+import copy
+import logging
 import math
+
 import numpy as np
 import torch
-from torch._C import device
 import torch.nn as nn
 from torch.autograd import Function
-from .broyden import broyden
-import copy
-import lib.layers.base as base_layers
 
-import logging
+from .broyden import broyden
 
 logger = logging.getLogger()
 
