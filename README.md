@@ -12,9 +12,9 @@ Implicit Normalizing Flows generalize normalizing flows by allowing the invertib
 2. observes how threshold value impact trainning time and accuracy.
 
 ## How to run 
-、、、
+```
 bash run_cifar10_by.sh
-、、、
+```
 
 ## How to get the datasets
 Downdload the datasets from: https://zenodo.org/record/1161203#.Wmtf_XVl8eN
